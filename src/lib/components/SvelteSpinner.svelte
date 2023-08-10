@@ -1,9 +1,9 @@
 <script lang="ts">
   import { getRandomNumber } from "$lib/modules/getRandomNumber"
   import { spring } from "svelte/motion"
+  import debounce from "just-debounce-it"
 
   let position = 0
-  let spinning = false
 
   const spinSpring = spring(
     { n: position },
@@ -24,22 +24,20 @@
     }
   }
 
-  const spin = () => {
-    if (spinning) return
-    spinning = true
-    spinSpring.set({ n: (position += spinBy()) })
-
-    setTimeout(() => {
-      spinning = false
-    }, 360)
-  }
+  const spin = debounce(
+    () => {
+      spinSpring.set({ n: (position += spinBy()) })
+    },
+    90,
+    true,
+  )
 </script>
 
 <div class="mx-auto self-end 2xl:self-start">
   <button
     id="svelte-logo"
     class="h-48 w-48 rounded-lg focus-visible:outline-none focus-visible:ring focus-visible:ring-svelte-500"
-    on:mouseenter={spin}
+    on:mousemove={spin}
     on:click={spin}
   >
     <svg
