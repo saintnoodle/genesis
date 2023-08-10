@@ -18,11 +18,11 @@
 </script>
 
 <div class="flex w-full items-center justify-center gap-4 2xl:col-span-2">
-  <button class={buttonClass} on:click={() => (count -= 1)}> - </button>
+  <button aria-label="Decrement Counter" class={buttonClass} on:click={() => (count -= 1)}> - </button>
   <p
     class="w-24 select-none text-center text-4xl font-semibold md:w-36 md:text-6xl lg:w-72 lg:text-9xl"
   >
     {count}
   </p>
-  <button class={buttonClass} on:click={() => (count += 1)}> + </button>
+  <button aria-label="Increment Counter" class={buttonClass} on:click={() => (count += 1)}> + </button>
 </div>

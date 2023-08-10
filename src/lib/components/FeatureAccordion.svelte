@@ -20,7 +20,7 @@
 </script>
 
 <div id="feature-accordion" class="w-full md:w-fit 2xl:h-64">
-  <h3 class="mb-1 ml-2 text-xl font-semibold">What's included?</h3>
+  <h1 class="mb-1 ml-2 text-xl font-semibold">What's included?</h1>
   <div
     use:melt={$root}
     {...$root}

@@ -43,6 +43,7 @@
 <div class="mx-auto self-end 2xl:self-start">
   <button
     id="svelte-logo"
+    aria-label="Svelte Spinner"
     class="h-48 w-48 rounded-lg focus-visible:outline-none focus-visible:ring focus-visible:ring-svelte-500"
     on:mousemove={spin}
     on:click={spin}

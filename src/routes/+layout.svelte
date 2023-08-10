@@ -12,4 +12,6 @@
   <meta name="theme-color" content="#ff3e00" />
 </svelte:head>
 
-<slot />
+<main class="container flex min-h-screen items-center justify-center">
+  <slot />
+</main>
