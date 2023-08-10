@@ -1,3 +1,10 @@
+<!--
+  @component
+  # SvelteSpinner
+
+  A spinning svelte logo with spring physics and tamed behaviour using just-debounce-it
+-->
+
 <script lang="ts">
   import { getRandomNumber } from "$lib/modules/getRandomNumber"
   import { spring } from "svelte/motion"

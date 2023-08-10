@@ -1,3 +1,11 @@
+<!--
+  @component
+  
+  # FeatureAccordion
+
+  An accordion using MeltUI listing and explaining everything installed with this template
+-->
+
 <script lang="ts">
   import { createAccordion, melt } from "@melt-ui/svelte"
   import { slide } from "svelte/transition"
@@ -9,7 +17,6 @@
     elements: { content, item, trigger, root },
     helpers: { isSelected },
   } = createAccordion()
-
 </script>
 
 <div id="feature-accordion" class="w-full md:w-fit 2xl:h-64">
