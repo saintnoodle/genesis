@@ -12,7 +12,7 @@ export default {
 
     extend: {
       colors: {
-        "svelte": {
+        svelte: {
           50: "#ffece6",
           100: "#ffc5b3",
           200: "#ff9f80",
@@ -23,8 +23,8 @@ export default {
           700: "#b32b00",
           800: "#801f00",
           900: "#4c1300",
-          950: "#190600"
-        }
+          950: "#190600",
+        },
       },
       fontFamily: {
         sans: ["Inter Variable", "sans-serif"],

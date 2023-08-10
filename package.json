@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "format": "prettier --write --plugin-search-dir=. ./src/**/*"
+    "format": "prettier --write '**/*.{css,postcss,json,js,ts,svelte}'"
   },
   "devDependencies": {
     "@melt-ui/pp": "^0.1.2",
