@@ -6,23 +6,51 @@
 -->
 
 <script lang="ts">
-  const buttonClass =
-    "flex h-6 w-6 select-none items-center justify-center rounded-lg px-2 pb-3 pt-1 text-3xl transition-colors hover:text-svelte-700 focus:ring focus:ring-svelte-500 focus:ring-opacity-60 focus-visible:outline-none dark:hover:text-svelte-300 md:text-4xl lg:text-7xl xl:h-12 xl:w-12"
+  import { count } from "$lib/stores/count"
+  import { createTooltip, melt } from "@melt-ui/svelte"
+  import { blur } from "svelte/transition"
+  import CounterButton from "./CounterButton.svelte"
 
-  $: count = 0
-  $: if (count === 1000) {
-    count = 0
-  } else if (count === -1) {
-    count = 999
+  const {
+    elements: { trigger, content, arrow },
+    states: { open },
+  } = createTooltip({
+    positioning: {
+      placement: "top",
+    },
+    openDelay: 120,
+    forceVisible: true,
+  })
+
+  $: if ($count === 1000) {
+    count.set(0)
+  } else if ($count === -1) {
+    count.set(999)
   }
 </script>
 
-<div class="flex w-full items-center justify-center gap-4 2xl:col-span-2">
-  <button aria-label="Decrement Counter" class={buttonClass} on:click={() => (count -= 1)}> - </button>
-  <p
-    class="w-24 select-none text-center text-4xl font-semibold md:w-36 md:text-6xl lg:w-72 lg:text-9xl"
+<div
+  class="relative flex w-full items-center justify-center gap-4 2xl:col-span-2"
+>
+  <CounterButton decrement />
+  <button
+    class="w-24 select-none rounded-lg text-center text-5xl font-semibold focus:ring focus:ring-svelte-500 focus-visible:outline-none lg:w-72 lg:text-9xl"
+    aria-label="Reset Counter"
+    on:click={() => count.set(0)}
+    use:melt={$trigger}
   >
-    {count}
-  </p>
-  <button aria-label="Increment Counter" class={buttonClass} on:click={() => (count += 1)}> + </button>
+    {$count}
+  </button>
+  <CounterButton />
 </div>
+
+{#if $open && $count !== 0}
+  <div
+    use:melt={$content}
+    transition:blur={{ duration: 120 }}
+    class="z-20 rounded-lg bg-stone-100 px-3 py-2 shadow dark:bg-slate-800"
+  >
+    <div use:melt={$arrow} />
+    <p>Click to reset the count</p>
+  </div>
+{/if}

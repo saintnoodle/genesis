@@ -29,6 +29,27 @@ export default {
       fontFamily: {
         sans: ["Inter Variable", "sans-serif"],
       },
+      animation: {
+        "gap-contract": "500ms reverse forwards ease-in gap",
+        "gap-expand": "500ms forwards ease-in gap",
+        "fade-in": "500ms forwards ease-in fade",
+        "fade-out": "500ms reverse forwards ease-in fade",
+        "landing": "500ms reverse forwards ease-in gap, 500ms forwards ease-in fade"
+      },
+      keyframes: {
+        gap: {
+          "0%": { gap: "7rem" },
+          "100%": { gap: "14rem" },
+        },
+        fade: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      transitionProperty: {
+        focus:
+          "color, background-color, border-color, text-decoration-color, box-shadow, transform",
+      },
     },
   },
 

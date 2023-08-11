@@ -14,6 +14,9 @@ dependencies:
   just-debounce-it:
     specifier: ^3.2.0
     version: 3.2.0
+  lucide-svelte:
+    specifier: ^0.265.0
+    version: 0.265.0(svelte@4.1.2)
   svelte-action-balancer:
     specifier: ^1.0.4
     version: 1.0.4
@@ -1005,6 +1008,14 @@ packages:
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
     dev: true
+
+  /lucide-svelte@0.265.0(svelte@4.1.2):
+    resolution: {integrity: sha512-rmIcnkvVxCA4xcxsUJ1AVSn3nuowdjgvK0wmdfBqNAaRmvCGqqPekpZMKBOlYLPzWLzwzGwG5A5J9nj9GH3TrQ==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      svelte: 4.1.2
+    dev: false
 
   /magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
