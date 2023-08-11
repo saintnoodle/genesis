@@ -8,10 +8,10 @@
 </script>
 
 <div
-  class="grid w-full animate-fade-in grid-cols-1 content-center justify-items-center gap-8 2xl:animate-landing 2xl:grid-cols-2 2xl:items-center 2xl:justify-items-stretch 2xl:gap-28"
+  class="grid w-full my-8 animate-fade-in grid-cols-1 content-center justify-items-center gap-8 2xl:animate-landing 2xl:grid-cols-2 2xl:items-center 2xl:justify-items-stretch 2xl:gap-28"
 >
   <div>
-    <h1 class="mx-auto text-center text-6xl font-bold md:text-8xl 2xl:mt-0">
+    <h1 class="mx-auto text-center text-6xl font-bold md:text-8xl">
       {PUBLIC_TITLE || "Genesis"}
     </h1>
   </div>
