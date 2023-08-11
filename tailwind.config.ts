@@ -34,7 +34,8 @@ export default {
         "gap-expand": "500ms forwards ease-in gap",
         "fade-in": "500ms forwards ease-in fade",
         "fade-out": "500ms reverse forwards ease-in fade",
-        "landing": "500ms reverse forwards ease-in gap, 500ms forwards ease-in fade"
+        landing:
+          "500ms reverse forwards ease-in gap, 500ms forwards ease-in fade",
       },
       keyframes: {
         gap: {

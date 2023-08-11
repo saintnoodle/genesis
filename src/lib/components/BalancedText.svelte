@@ -12,10 +12,6 @@
   export let ratio = 0.85
 </script>
 
-<svelte:element
-  this={as}
-  use:balancer={{ ratio: ratio }}
-  {...$$restProps}
->
+<svelte:element this={as} use:balancer={{ ratio: ratio }} {...$$restProps}>
   <slot />
 </svelte:element>

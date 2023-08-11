@@ -11,13 +11,14 @@ export const items = [
     title: "Fontsource",
     description:
       "Inter is installed using Fontsource so it can be bundled rather than pulling the font from a CDN. This reduces latency and helps to prevents content refresh as the font loads in. Bundling your fonts also means they will be accessible offline, like in the case of PWA.",
-    url: "https://fontsource.org/docs/getting-started/introduction"
+    url: "https://fontsource.org/docs/getting-started/introduction",
   },
   {
     id: "lucide",
     title: "Lucide",
-    description: "A wide and growing collection of clean SVG icons that are easy to use.",
-    url: "https://lucide.dev/guide"
+    description:
+      "A wide and growing collection of clean SVG icons that are easy to use.",
+    url: "https://lucide.dev/guide",
   },
   {
     id: "balancer",
