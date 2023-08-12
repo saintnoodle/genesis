@@ -30,21 +30,27 @@ export default {
         sans: ["Inter Variable", "sans-serif"],
       },
       animation: {
-        "gap-contract": "500ms reverse forwards ease-in gap",
-        "gap-expand": "500ms forwards ease-in gap",
+        "gap-contract": "500ms reverse ease-in gap",
+        "gap-expand": "500ms ease-out gap",
         "fade-in": "500ms forwards ease-in fade",
         "fade-out": "500ms reverse forwards ease-in fade",
         landing:
           "500ms reverse forwards ease-in gap, 500ms forwards ease-in fade",
+        "slide-in": "500ms reverse forwards ease-out slide",
+        "slide-out": "500ms forwards ease-in slide",
       },
       keyframes: {
         gap: {
           "0%": { gap: "5rem" },
-          "100%": { gap: "15rem" },
+          "100%": { gap: "10rem" },
         },
         fade: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        slide: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(4rem)" },
         },
       },
       transitionProperty: {
