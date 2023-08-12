@@ -11,6 +11,7 @@
   import BalancedText from "$lib/components/ui/BalancedText.svelte"
   import { items } from "$lib/consts/FeatureAccordionItems"
   import { expoOut } from "svelte/easing"
+  import Anchor from "./ui/Anchor.svelte"
 
   const {
     elements: { content, item, trigger, root },
@@ -29,11 +30,11 @@
       {#each items as { id, title, description, url }, i}
         <div
           use:melt={$item({ value: id })}
-          class="relative flex flex-col overflow-hidden first:rounded-t-lg last:rounded-b-lg focus-within:z-10 focus-within:ring focus-within:ring-svelte-500 focus-within:ring-opacity-60"
+          class="relative flex flex-col overflow-hidden first:rounded-t-lg last:rounded-b-lg [&:has(:focus-visible)]:z-10 [&:has(:focus-visible)]:ring [&:has(:focus-visible)]:ring-svelte-500 [&:has(:focus-visible)]:ring-opacity-60"
         >
           <button
             use:melt={$trigger({ value: id })}
-            class="flex justify-between border-t px-4 py-2 text-start font-semibold transition-colors focus-visible:outline-none data-[state=open]:text-svelte-500 hocus:text-svelte-500 dark:border-slate-700 {i ===
+            class="flex justify-between border-t px-4 py-2 text-start font-semibold transition-colors hover:text-svelte-500 focus-visible:text-svelte-500 focus-visible:outline-none data-[state=open]:text-svelte-500 dark:border-slate-700 {i ===
             0
               ? 'border-t-0'
               : ''}"
@@ -49,12 +50,7 @@
               <BalancedText class="whitespace-pre-line px-4 py-2">
                 {description}
 
-                Explore {title}'s{" "}<a
-                  href={url}
-                  class="rounded underline transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-svelte-500 focus-visible:ring-opacity-60 hocus:text-svelte-700 dark:hocus:text-svelte-300"
-                >
-                  documentation</a
-                >.
+                Explore {title}'s{" "}<Anchor href={url}>documentation</Anchor>.
               </BalancedText>
             </div>
           {/if}
