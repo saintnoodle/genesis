@@ -34,7 +34,7 @@
 >
   <CounterButton decrement />
   <button
-    class="w-24 select-none rounded-lg text-center text-5xl font-semibold focus:ring focus:ring-svelte-500 focus-visible:outline-none lg:w-72 lg:text-9xl"
+    class="w-24 touch-manipulation select-none rounded-lg text-center text-5xl font-semibold focus:ring focus:ring-svelte-500 focus-visible:outline-none lg:w-72 lg:text-9xl"
     aria-label="Reset Counter"
     on:click={() => count.set(0)}
     use:melt={$trigger}

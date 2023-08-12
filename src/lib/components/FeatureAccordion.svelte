@@ -8,7 +8,7 @@
 <script lang="ts">
   import { createAccordion, melt } from "@melt-ui/svelte"
   import { slide } from "svelte/transition"
-  import BalancedText from "$lib/components/BalancedText.svelte"
+  import BalancedText from "$lib/components/ui/BalancedText.svelte"
   import { items } from "$lib/consts/FeatureAccordionItems"
   import { expoOut } from "svelte/easing"
 
@@ -33,7 +33,7 @@
         >
           <button
             use:melt={$trigger({ value: id })}
-            class="flex justify-between border-t px-4 py-2 text-start text-lg font-semibold transition-colors focus-visible:outline-none data-[state=open]:text-svelte-500 hocus:text-svelte-500 dark:border-slate-700 {i ===
+            class="flex justify-between border-t px-4 py-2 text-start font-semibold transition-colors focus-visible:outline-none data-[state=open]:text-svelte-500 hocus:text-svelte-500 dark:border-slate-700 {i ===
             0
               ? 'border-t-0'
               : ''}"
@@ -44,7 +44,7 @@
             <div
               use:melt={$content(id)}
               transition:slide={{ duration: 120, easing: expoOut }}
-              class="overflow-hidden bg-white shadow-inner dark:bg-slate-900"
+              class="overflow-hidden bg-white text-sm shadow-inner dark:bg-slate-900"
             >
               <BalancedText class="whitespace-pre-line px-4 py-2">
                 {description}

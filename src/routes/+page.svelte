@@ -2,13 +2,14 @@
   import Counter from "$lib/components/Counter.svelte"
   import FeatureAccordion from "../lib/components/FeatureAccordion.svelte"
   import SvelteSpinner from "$lib/components/SvelteSpinner.svelte"
-  import BalancedText from "$lib/components/BalancedText.svelte"
-  import Anchor from "$lib/components/UI/Anchor.svelte"
+  import BalancedText from "$lib/components/ui/BalancedText.svelte"
+  import Anchor from "$lib/components/ui/Anchor.svelte"
   import { PUBLIC_TITLE } from "$env/static/public"
+  import CloneCommand from "$lib/components/CloneCommand.svelte"
 </script>
 
 <div
-  class="grid w-full my-8 animate-fade-in grid-cols-1 content-center justify-items-center gap-8 2xl:animate-landing 2xl:grid-cols-2 2xl:items-center 2xl:justify-items-stretch 2xl:gap-28"
+  class="my-8 grid w-full animate-fade-in grid-cols-1 content-center justify-items-center gap-8 2xl:animate-landing 2xl:grid-cols-2 2xl:items-center 2xl:justify-items-stretch 2xl:gap-28"
 >
   <div>
     <h1 class="mx-auto text-center text-6xl font-bold md:text-8xl">
@@ -28,10 +29,14 @@
       <Anchor href="https://tailwindcss.com/">tailwindcss</Anchor>, and
       <Anchor href="https://prettier.io/">prettier</Anchor>.
     </BalancedText>
-    <BalancedText class="mx-auto mt-2">
+    <BalancedText class="mx-auto">
       A small collection of useful libraries and utilities are included and
       ready to go.
     </BalancedText>
+    <CloneCommand
+      class="mt-4 hidden flex-col text-lg md:flex xl:hidden"
+      placement="bottom"
+    />
   </div>
 
   <Counter />

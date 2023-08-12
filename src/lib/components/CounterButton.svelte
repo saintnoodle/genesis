@@ -14,7 +14,7 @@
 
 <button
   aria-label={decrement ? "Decrement Counter" : "Increment Counter"}
-  class="flex h-8 w-8 select-none items-center justify-center rounded-lg p-1 transition-colors hover:text-svelte-700 focus:ring focus:ring-svelte-500 focus:ring-opacity-60 focus-visible:outline-none dark:hover:text-svelte-300 lg:h-12 lg:w-12"
+  class="flex h-8 w-8 touch-manipulation select-none items-center justify-center rounded-lg p-1 transition-colors hover:text-svelte-700 focus:ring focus:ring-svelte-500 focus:ring-opacity-60 focus-visible:outline-none dark:hover:text-svelte-300 lg:h-12 lg:w-12"
   on:click={() => count.update((n) => conditionalCount(n))}
 >
   {#if decrement}

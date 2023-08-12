@@ -39,8 +39,8 @@ export default {
       },
       keyframes: {
         gap: {
-          "0%": { gap: "7rem" },
-          "100%": { gap: "14rem" },
+          "0%": { gap: "5rem" },
+          "100%": { gap: "15rem" },
         },
         fade: {
           "0%": { opacity: "0" },

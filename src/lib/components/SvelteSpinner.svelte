@@ -40,11 +40,11 @@
   )
 </script>
 
-<div class="mx-auto self-end 2xl:self-start">
+<div class="mx-auto self-end 2xl:self-center">
   <button
     id="svelte-logo"
     aria-label="Svelte Spinner"
-    class="h-32 w-32 rounded-lg focus-visible:outline-none focus-visible:ring focus-visible:ring-svelte-500"
+    class="h-32 w-32 touch-manipulation rounded-lg focus-visible:outline-none focus-visible:ring focus-visible:ring-svelte-500"
     on:mousemove={spin}
     on:click={spin}
   >
