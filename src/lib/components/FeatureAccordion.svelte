@@ -20,7 +20,7 @@
 </script>
 
 <div id="feature-accordion" class="flex w-full flex-col items-center 2xl:h-64">
-  <div class="w-full max-w-[620px]">
+  <div class="w-full max-w-[600px]">
     <h1 class="mb-1 ml-2 text-xl font-semibold">What's included?</h1>
     <div
       use:melt={$root}
