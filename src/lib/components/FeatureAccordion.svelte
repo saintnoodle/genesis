@@ -30,7 +30,7 @@
       {#each items as { id, title, description, url }, i}
         <div
           use:melt={$item({ value: id })}
-          class="relative flex flex-col overflow-hidden first:rounded-t-lg last:rounded-b-lg [&:has(:focus-visible)]:z-10 [&:has(:focus-visible)]:ring [&:has(:focus-visible)]:ring-svelte-500 [&:has(:focus-visible)]:ring-opacity-60"
+          class="relative flex flex-col overflow-hidden first:rounded-t-lg last:rounded-b-lg focus-visible-within:z-10 focus-visible-within:ring focus-visible-within:ring-svelte-500 focus-visible-within:ring-opacity-60"
         >
           <button
             use:melt={$trigger({ value: id })}
