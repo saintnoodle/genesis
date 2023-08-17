@@ -29,7 +29,7 @@
     on:click={() => addToast({ data: "Copied to clipboard" })}
     use:melt={$trigger}
     aria-label="Copy Command"
-    class="rounded focus-visible:ring focus-visible:ring-svelte-500 focus-visible:ring-opacity-60 focus-visible:outline-none"
+    class="rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-svelte-500 focus-visible:ring-opacity-60"
     ><Code
       >git clone https://github.com/saintnoodle/genesis my-sveltekit-app</Code
     ></button
